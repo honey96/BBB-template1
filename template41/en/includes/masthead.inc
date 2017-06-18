@@ -40,7 +40,8 @@
                                         <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?op=list&amp;category=2" tabindex="-1" role="menuitem" class="listmenulink">View All</a></li>
                                     [% END %]
                                 [% ELSE %]
-                                    <li role="presentation"><a href="#" tabindex="-1" class="menu-inactive" role="menuitem">No public lists</a></li>
+                                    <li role="presentation"><a href="#" tabindex="-1" class="menu-inactive" role="menuitem">No public l
+                                        ists</a></li>
                                 [% END %]
                                 <li class="divider" role="presentation"></li>
                                 [% IF Koha.Preference( 'opacuserlogin' ) == 1 %]
@@ -126,7 +127,7 @@
         
     </div> <!-- / header-region -->
 
-<div class="">
+<!--<div class="">
 <div class="row-fluid">
             <div id="opac-main-search" class="">
             <div class="span12 fullsearch">
@@ -273,19 +274,19 @@
                             </div>
                             <div class="span2"></div>
                             </div> <!-- /#moresearches -->
-                    </div> <!-- /.row-fluid -->
+                    <!--</div>--> <!-- /.row-fluid -->
 
-                        </div> <!-- / .mastheadsearch -->
-                [% END # / OpacPublic %]
+                       <!-- </div> <!-- / .mastheadsearch -->
+               <!-- [% END # / OpacPublic %]
  
             </div> <!-- /.span10 -->
-            </div> <!-- /.opac-main-search -->
-        </div> <!-- / .row-fluid -->
-    </div> <!-- /.container-fluid -->
+            <!--</div> <!-- /.opac-main-search -->
+       <!-- </div> <!-- / .row-fluid -->
+   <!-- </div> <!-- /.container-fluid -->
 
 
     <!-- Login form hidden by default, used for modal window -->
-    <div id="loginModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <!--<div id="loginModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="closebtn" data-dismiss="modal" aria-hidden="true">×</button>
             <h3 id="modalLoginLabel">Log in to your account</h3>
@@ -295,7 +296,7 @@
                     [% IF ( shibbolethAuthentication ) %]
                     [% IF ( invalidShibLogin ) %]
                     <!-- This is what is displayed if shibboleth login has failed to match a koha user -->
-                    <div class="alert alert-info">
+        <!--            <div class="alert alert-info">
                         <p>Sorry, your Shibboleth identity does not match a valid library identity. If you have a local login, you may use that below.</p>
                     </div>
                     [% ELSE %]
@@ -314,7 +315,7 @@
                         </div>
                     [% END %]
                     [% IF Koha.Preference( 'NoLoginInstructions' ) %]
-                        <div id="nologininstructions-modal">
+                        <div id="nol+ogininstructions-modal">
                             [% Koha.Preference( 'NoLoginInstructions' ) %]
                         </div>
                     [% END %]
@@ -329,4 +330,4 @@
             </div>
             
         </form> <!-- /#auth -->
-    </div>  <!-- /#modalAuth  -->
+  <!--  </div>  <!-- /#modalAuth  -->

@@ -8,8 +8,8 @@
 [% INCLUDE 'bodytag.inc' bodyid='opac-main' %]
 [% INCLUDE 'masthead.inc' %]
 
-<div class="main">
-    <ul class="breadcrumb">
+<!--<div class="main">
+    <!--<ul class="breadcrumb">
         <li><a href="#" style="color:white">Home</a></li>
     </ul>
 
@@ -51,27 +51,27 @@
             </div>
             <div id="rssnews-container">
                 <!-- Logged in users have a branch code or it could be explicitly set -->
-                <a href="[% OPACBaseURL %]/cgi-bin/koha/opac-news-rss.pl?branchcode=[% branchcode %]"><img src="[% interface %]/[% theme %]/images/feed-icon-16x16.png"></a>
+         <!--       <a href="[% OPACBaseURL %]/cgi-bin/koha/opac-news-rss.pl?branchcode=[% branchcode %]"><img src="[% interface %]/[% theme %]/images/feed-icon-16x16.png"></a>
                 RSS feed for [% IF ( branchcode ) %][% Branches.GetName( branchcode ) %] <i>and</i> [% END %] system-wide library news.
             </div>
         [% END %]
-
-      <!--  [% IF ( display_daily_quote && daily_quote ) %]
+-->
+       [% IF ( display_daily_quote && daily_quote ) %]
             <div id="daily-quote">
                 <h3>Quote of the Day</h3>
                 <div>
                     <span id="daily-quote-text">[% daily_quote.text %]</span><span id="daily-quote-sep"> ~ </span><span id="daily-quote-source">[% daily_quote.source %]</span>
                 </div>
             </div>
-        [% END %] -->
+        [% END %] 
 
-        [% IF ( OpacMainUserBlock ) %]<div id="opacmainuserblock">[% OpacMainUserBlock %]</div>[% END %]
+<!--        [% IF ( OpacMainUserBlock ) %]<div id="opacmainuserblock">[% OpacMainUserBlock %]</div>[% END %]-->
 
                 [% INCLUDE 'main-page.inc' %]
 
-        </div> <!-- / .span 7/9 -->
+     <!--   </div> <!-- / .span 7/9 -->
 
-        [% IF ( ( Koha.Preference( 'opacuserlogin' ) == 1 ) || OpacNavRight ) %]
+    <!--    [% IF ( ( Koha.Preference( 'opacuserlogin' ) == 1 ) || OpacNavRight ) %]
             <div class="span3">
                 [% IF Koha.Preference( 'opacuserlogin' ) == 1 %]
                     [% UNLESS ( loggedinusername ) %]
@@ -100,13 +100,13 @@
                                 [% END %]
                                 </form>
                             </div> <!-- /#login -->
-                        [% END # /casAuthentication %]
+                        <!--[% END # /casAuthentication %]
                         [% IF persona %]
                             <a href="#" class="persona-button" id="browserid" ><span>Sign in with your email</span></a>
                         [% END # /persona %]
                     [% END # / loggedinusername %]
-                [% END # /opacuserlogin %]
-                [% IF ( OpacNavRight ) %]
+                [% END # /opacuserlogin %]-->
+                <!--[% IF ( OpacNavRight ) %]
                     <div id="opacnavright">
                         [% OpacNavRight %]
                     </div>
@@ -121,11 +121,11 @@
 <br />
 
             </div> <!-- / .span3 -->
-        [% END # /opacuserlogin || OpacNavRight %]
+        <!--[% END # /opacuserlogin || OpacNavRight %]
 
         </div> <!-- /.container-fluid -->
-    </div> <!-- /.row-fluid -->
-</div> <!-- /.main -->
+    <!--</div> <!-- /.row-fluid -->
+<!--</div> <!-- /.main -->
 
 [% INCLUDE 'opac-bottom.inc' %]
 [% BLOCK jsinclude %][% END %]

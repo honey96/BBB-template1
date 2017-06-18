@@ -15,6 +15,52 @@
 
     [% END #/ opaccredits %]
 
+<!--<section class="container-fluid footer-top1">
+<section class="container">
+<section class="row-fluid">
+<figure class="span3">
+<h4>Newsletter</h4>
+<p>Subscribe to be the first to know about Best Deals and Exclusive Offers!</p>
+<input name="" type="text" class="field-bg" value="Enter Your Email"/>
+<input name="" type="submit" value="Subscribe" class="sub-btn"/>
+</figure>
+<figure class="span3">
+<h4>Twitter</h4>
+<ul class="tweets-list">
+<li>Bookshoppe’- WooCommerce theme by crunchpress http<a href="#">://z.8o/XcexW23Q #envato</a></li>
+<li>Bookshoppe’- WooCommerce theme by crunchpress http<a href="#">://z.8o/XcexW23Q #envato</a></li>
+</ul>
+</figure>
+<figure class="span3">
+<h4>Location</h4>
+<p>5/23, Loft Towers, Business Center, 6th Floor, Media City, Dubai.</p>
+<span>
+<ul class="phon-list">
+<li>(971) 438-555-314</li>
+<li>(971) 367-252-333</li>
+</ul>
+</span> <span class="mail-list"> <a href="#"><span class="__cf_email__" data-cfemail="83eaede5ecc3e0eceef3e2edfaede2eee6">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a><br/>
+<a href="#"><span class="__cf_email__" data-cfemail="d2b8bdb0a192b1bdbfa2b3bcabbcb3bfb7fcb1bdbf">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a> </span> </figure>
+<figure class="span3">
+<h4>Opening Time</h4>
+<p>Monday-Friday ______8.00 to 18.00</p>
+<p>Saturday ____________ 9.00 to 18.00</p>
+<p>Sunday _____________10.00 to 16.00</p>
+
+</figure>
+</section>
+</section>
+</section>
+ 
+-->
+
+
+
+
+
+
+
+
 <div class="">
 <div class="span10" style="margin-top:2px;">
 Hosted, Implemented, Customized &amp; Maintained by: 
@@ -31,6 +77,8 @@ Powered by
     
 
 </div> <!-- / #wrap in masthead.inc -->
+
+
 [% IF OpacLangSelectorMode == 'both' || OpacLangSelectorMode == 'footer' %]
     [% IF ( opaclanguagesdisplay ) %]
         [% IF ( languages_loop && opaclanguagesdisplay ) %]
@@ -79,10 +127,10 @@ Powered by
 
 <!-- JavaScript includes -->
 <script type="text/javascript" src="[% interface %]/[% theme %]/lib/jquery/jquery.js"></script>
-<script>
-$.noConflict();
+<!--<script type="text/javascript">
+ $.noConflict(true);
 // Code that uses other library's $ can follow here.
-</script> 
+</script> --> 
 <script type="text/javascript" src="[% interface %]/[% theme %]/lib/jquery/jquery-ui.js"></script>
 <script type="text/javascript">
 // Resolve name collision between jQuery UI and Twitter Bootstrap
@@ -97,7 +145,7 @@ $.widget.bridge('uitooltip', $.ui.tooltip);
 <script>   
 $('.bookslider').bxSlider({ 
   auto: true, 
-  autoControls: true 
+  autoControls: false
    }); 
 </script>
 <script> 
@@ -115,19 +163,10 @@ $('.bookslider').bxSlider({
 <script>   
 $('.slider1').bxSlider({ 
   auto: true, 
-  autoControls: true 
+  autoControls: false
    }); 
 </script>
-<script type="text/javascript">
-	$('divmaincategories_block_left ul.dhtml').hide();
-	$('.slider1').bxSlider({
-        slideWidth: 160,
-        minSlides: 1,
-        maxSlides: 6,
-        slideMargin: 10,
-        thumbpadding :12,
-    });
-</script>
+
 
 <script type="text/javascript">
     Modernizr.load([
@@ -409,8 +448,20 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 <script type="text/javascript" src="[% interface %]/[% theme %]/js/js/swipebox/src/js/jquery.swipebox.min.js"></script>
 
-
-
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    if ($('.slider1').length) {
+        $('.slider1').bxSlider({
+            slideWidth: 142,
+            minSlides: 1,
+            maxSlides: 8,
+            slideMargin: 18,
+            speed: 1500
+            autoControls:false
+        });
+    }
+}
+</script>
 
 
 
@@ -419,11 +470,11 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 <!--Custom Js-->
 
 <!-- my js -->
-<!--<script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/jquery.min.js"></script> -->
+<script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/jquery.min.js"></script> 
 <script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/lib.js"></script>
 <script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/modernizr.js"></script>
 <script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/easing.js"></script>
-<script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/bs.js"></script>
+<!--<script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/bs.js"></script> -->
 <script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/bxslider.js"></script>
 <script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/input-clear.js"></script>
 <script type="text/javascript" src="[% interface %]/[% theme %]/js/js1/range-slider.js"></script>

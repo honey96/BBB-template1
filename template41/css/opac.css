@@ -6,6 +6,7 @@ a,a:visited{color:#0076B2}h1,h2,h3{line-height:150%}a.title,caption,legend{font-
 
 body{
 	background-color:#e8e6e3;
+	overflow-x:hidden;
 }
 
 #header-region {
